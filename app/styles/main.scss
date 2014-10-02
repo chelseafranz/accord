@@ -17,40 +17,51 @@ $smallFont: 'Helvetica';
   color: white;
   font-weight:100;
   margin: 0px;
+  display: block;
 }
 
 @mixin boxes{
   background-color: white;
-  height: 200px;
   width: 600px;
   border:1px solid HSLA(184, 100%, 42%, 1);
   margin: 0px;
 }
 
 .bigBox{
-  height: 200px;
+  height: 600px;
   width: 600px;
   /* background-color: HSLA(206, 18%, 69%, 1); */
 
 .box1 {
   @include boxes;
 }
+
 .box2{
   @include boxes;
 }
-.box3{
-@include boxes;
-}
-}
 
+.box3{
+  @include boxes;
+}
+}
 
 h2{
   @include heading;
 }
+h2:hover{
+    background-color: HSLA(184, 100%, 42%, .5);
+}
 
-.click{
-  height: 40px;
-  width: 600px;
+
+section{
+  height: 30px;
   overflow: hidden;
+  transition: height 1s ease;
+
+}
+.one{
+  height: 150px;
+  width: 600px;
+
 
 }

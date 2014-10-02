@@ -3,24 +3,54 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
-body {
+/* body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+} */
+
+$mainFont: 'Open Sans';
+$smallFont: 'Helvetica';
+@mixin heading{
+  font-family: $mainFont;
+  background-color: HSLA(184, 100%, 42%, 1);
+  color: white;
+  font-weight:100;
+  margin: 0px;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
+@mixin boxes{
+  background-color: white;
+  height: 200px;
   width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+  border:1px solid HSLA(184, 100%, 42%, 1);
+  margin: 0px;
+}
+
+.bigBox{
+  height: 200px;
+  width: 600px;
+  /* background-color: HSLA(206, 18%, 69%, 1); */
+
+.box1 {
+  @include boxes;
+}
+.box2{
+  @include boxes;
+}
+.box3{
+@include boxes;
+}
+}
+
+
+h2{
+  @include heading;
+}
+
+.click{
+  height: 40px;
+  width: 600px;
+  overflow: hidden;
+
 }

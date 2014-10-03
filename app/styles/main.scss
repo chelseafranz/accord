@@ -4,8 +4,26 @@
 
 $mainFont: 'Fjalla One';
 $smallFont: 'Raleway';
-$background: url(http://i57.tinypic.com/2ni8qqu.png);
+$skulls: url(http://i59.tinypic.com/wswk2c.png);
+$stardust: url(http://i61.tinypic.com/10iap75.png);
+$sativa: url(http://i61.tinypic.com/rjo64y.png);
 
+@mixin marakesh{
+  background-color:white;
+  background-image:
+radial-gradient(midnightblue 9px, transparent 10px),
+repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);
+  background-size: 30px 30px, 90px 90px;
+  background-position: 0 0;
+}
+
+@mixin lined_paper{
+  background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+}
 
 @mixin heading{
   font-family: $mainFont;
@@ -15,7 +33,7 @@ $background: url(http://i57.tinypic.com/2ni8qqu.png);
   height: 50px;
   margin: 0px;
   display: block;
-  background: $background;
+  background-image: $skulls ;
 }
 
 @mixin boxes{
@@ -25,7 +43,10 @@ $background: url(http://i57.tinypic.com/2ni8qqu.png);
   border-radius: 7px;
   margin: 0px;
 }
+body{
+  background: $stardust;
 
+}
 .bigBox{
   height: auto;
   width: 600px;
@@ -53,24 +74,26 @@ h2{
 
 }
 h2:hover{
-    background-color: HSLA(270, 36%, 48%, .6);
-    transition:background-color 1s ease;
+  transition:background-color 1s ease;
 }
 
 p{
   padding: 10px;
   padding-top: 0px;
   margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 section{
-  height: 30px;
+  height: 35px;
   overflow: hidden;
-  transition: height 1s ease;
+  transition: height 1s ease-in-out;
   border-radius: 7px;
-  background-color: HSLA(206, 18%, 69%, 1);
+  /* background-color: HSLA(206, 18%, 69%, 1) */;
+  @include lined_paper;
 }
 .one{
   height: 200px;
   width: 600px;
-  background-color: HSLA(0, 0%, 31%, .08);
+  /* background-color: HSLA(0, 0%, 31%, .08); */
 }

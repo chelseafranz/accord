@@ -9,7 +9,10 @@ console.log('The Iron Yard Rocks');
 //   $('section').removeClass('open')
 //   $( this ).addClass('open');
 // })
+
+
 $('section').click(function(){
   $('section').removeClass('one')
   $( this ).addClass('one');
+  
 });

@@ -1,5 +1,6 @@
  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/bitters/app/assets/stylesheets/base';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 $mainFont: 'Fjalla One';
@@ -8,16 +9,6 @@ $skulls: url(http://i59.tinypic.com/wswk2c.png);
 $stardust: url(http://i61.tinypic.com/10iap75.png);
 $sativa: url(http://i61.tinypic.com/rjo64y.png);
 
-@mixin stars{
-  background-color:black;
-background-image:
-radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-}
 
 @mixin marakesh{
   background-color:white;
@@ -63,7 +54,8 @@ body{
   width: 600px;
   margin: 0 auto;
   margin-top: 100px;
-  box-shadow: 8px 8px 5px #888888;
+  box-shadow: inset 8px 8px 10px black, 5px 5px 8px black;
+  /* box-shadow: 15px 15px 8px 12px #888888; */
   border-radius: 7px;
 
 .box1 {
@@ -78,6 +70,28 @@ body{
   @include boxes;
 }
 }
+.button{
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 25px;
+
+}
+button {
+   margin: 0 auto;
+   border-top: 1px solid #434445;
+   background: $stardust;
+    font-family: $mainFont;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+  padding: 20px;
+   background: $stardust;
+   color: white;
+   padding: 10px;
+   transition: padding 4s ease-in-out;
+
+   }
 
 h2{
   @include heading;

@@ -7,8 +7,8 @@ $mainFont: 'Fjalla One';
 $smallFont: 'Raleway';
 $skulls: url(http://i59.tinypic.com/wswk2c.png);
 $stardust: url(http://i61.tinypic.com/10iap75.png);
-$sativa: url(http://i61.tinypic.com/rjo64y.png);
-
+$shapes: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/9cYvCtGdTnkATfb/congruent_outline.png);
+$bricks: url(https://s3.amazonaws.com/uploads.hipchat.com/31349/1240363/fb2M312BVCrT1h9/brickwall_%402X.png);
 
 @mixin marakesh{
   background-color:white;
@@ -34,7 +34,7 @@ background-size: 100% 1.2em;
   height: 50px;
   margin: 0px;
   display: block;
-  background-image: $stardust ;
+  background-image: $shapes;
 }
 
 @mixin boxes{
@@ -46,7 +46,7 @@ background-size: 100% 1.2em;
 }
 
 body{
-  background-image:$sativa;
+  background-image: $bricks;
 }
 
 .bigBox{
